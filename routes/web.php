@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('listado');
 });
+
+Route::get('/crear-pregunta', function () {
+    return view('crear-pregunta');
+});
+
