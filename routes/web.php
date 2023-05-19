@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Cuestion;
+use App\Http\Controllers\Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +16,24 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('listado');
+    $cuestiones = Cuestion::all();
+    return view('listado', ['cuestiones' => $cuestiones]);
+
 });
 
 Route::get('/crear-pregunta', function () {
     return view('crear-pregunta');
 });
+
+Route::get('/text', function () {
+    $cuestion= new Cuestion ();
+    $cuestion->enunciado="abcd";
+    $cuestion->estado="VISIBLE";
+    $cuestion->save();
+});
+
+
+Route::post('/cuestiones', [Controller::class, 'callApiStoreCuestion']);
+
+
 

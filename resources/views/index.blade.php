@@ -17,9 +17,9 @@
         </div>
         <div class="menu-header">
 
-                <p id="subrado-menu-listado">Listado de preguntas</p>
+                <p id="subrayado-menu-listado">Listado de preguntas</p>
 
-          <a href="/crear-pregunta"> <p>Crear preguntas</p></a>
+          <a href="/quick-list/public/crear-pregunta"> <p class="crear-pregunta-header">Crear preguntas</p></a>
         </div>
     </div>
 

@@ -5,24 +5,30 @@
 @section('content')
 
 <div class="contenedor-form">
+    <form action="/quick-list/public/cuestiones" method="post">
     <div class="caja">
         <div class="Crear-cuestion">
-            <p>Crear pregunta</p>
-
+            <p id="titulo-crear-pregunta">Crear pregunta</p>
         </div>
         <div class="estado">
             <p>Estado</p>
-            <input type="text">
+            <select name="estado" id="select">
+                <option value=""></option>
+                <option value="VISIBLE">VISIBLE</option>
+                <option value="OCULTO">OCULTO</option>
+            </select>
         </div>
-        <div class="Enunciado">Enunciado</div>
+        <div class="enunciado">Enunciado</div>
         <div>
-            <textarea></textarea>
+            <textarea class="textarea" name="enunciado"></textarea>
         </div>
-        <button class="button-crear">Crear</button>
+        <div>
+            <button class="button-crear" type="submit">Crear</button>
+
+            <div class="zona-message"></div>
+
+        </div>
+    </form>
     </div>
 
-    <div class="zona-message">Zona de mensajes de éxito u error</div>
-
-</div>
-
-@endsection
+    @endsection
