@@ -39,4 +39,10 @@ class Controller extends BaseController
         return $cuestiones;
     }
 
+    public function getCuestionesActivas(Request $request){
+        $cuestiones = Cuestion::where('estado','=','VISIBLE')->get();
+        return $cuestiones;
+    }
+
+
 }

@@ -21,5 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/cuestiones', [Controller::class, 'storeCuestion']);
 Route::get('/cuestiones', [Controller::class, 'getCuestiones']);
+Route::get('/cuestiones/activas', [Controller::class, 'getCuestionesActivas']);
 
 
